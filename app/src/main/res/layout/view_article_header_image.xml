@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/view_article_header_image_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="?lead_image_drawable"
+        android:contentDescription="@null" />
+
+    <org.wikipedia.views.FaceAndColorDetectImageView
+        android:id="@+id/view_article_header_image_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageScaleType="focusCrop"
+        android:contentDescription="@null" />
+
+</merge>

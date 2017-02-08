@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/akvopedia_splash" />
+    <item>
+        <!-- Use a bitmap element with centered gravity to prevent scaling. -->
+        <bitmap
+            android:src="@drawable/ic_akvopedia_logo"
+            android:antialias="true"
+            android:gravity="center" />
+    </item>
+</layer-list>

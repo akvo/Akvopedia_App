@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools">
+    <group android:id="@+id/group_main">
+        <item android:id="@+id/nav_item_feed"
+            android:title="@string/nav_item_feed"
+            android:icon="@drawable/ic_globe"
+            android:checkable="true"
+            />
+        <item android:id="@+id/nav_item_history"
+            android:title="@string/nav_item_history"
+            android:icon="@drawable/ic_restore_black_24dp"
+            android:checkable="true"
+            />
+        <item android:id="@+id/nav_item_reading_lists"
+            android:title="@string/nav_item_reading_lists"
+            android:icon="@drawable/ic_bookmark_black_24dp"
+            android:checkable="true"
+            />
+    </group>
+    <group android:id="@+id/group_user">
+        <item android:id="@+id/nav_item_logout"
+            android:title="@string/preference_title_logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            />
+    </group>
+</menu>

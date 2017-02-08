@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.github.JakeWharton:sdk-manager-plugin:1d07987'
+        classpath 'org.gradle.api.plugins:gradle-nexus-plugin:0.7.1'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.1.0'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven { url 'https://oss.sonatype.org/content/groups/staging' }
+    }
+}
