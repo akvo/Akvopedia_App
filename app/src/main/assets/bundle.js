@@ -884,9 +884,9 @@ transformer.register( "hideTables", function( content ) {
         containerDiv.appendChild(bottomDiv);
 
         //set initial visibility
-        tables[i].style.display = 'none';
+        tables[i].style.display = 'block';
         collapsedDiv.style.display = 'block';
-        bottomDiv.style.display = 'none';
+        bottomDiv.style.display = 'block';
 
         //assign click handler to the collapsed divs
         collapsedDiv.onclick = handleTableCollapseOrExpandClick;

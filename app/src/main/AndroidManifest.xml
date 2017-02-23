@@ -4,10 +4,10 @@
     package="org.wikipedia"
     android:installLocation="auto">
     <!--
-    If the build is intended to be Google Play-updateable, the package name
+    If the build is intended to be Google Play-updatable, the package name
     should be the same as for Google Play (name depends on Beta or Stable).
-    Otherwise, if the build is not intended to be Google Play-updateable (e.g.,
-    updateable via an alternative appstore update mechanism), the package name
+    Otherwise, if the build is not intended to be Google Play-updatable (e.g.,
+    updatable via an alternative appstore update mechanism), the package name
     should be specific to the update mechanism channel.
     -->
 
@@ -67,8 +67,8 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:host="*.akvopedia.org" android:pathPrefix="/wiki/" android:scheme="http" />
-                <data android:host="*.akvopedia.org" android:pathPrefix="/wiki/" android:scheme="https" />
+                <data android:host="*.akvopedia.org" android:pathPrefix="/wiki/Akvopedia_mobile" android:scheme="http" />
+                <data android:host="*.akvopedia.org" android:pathPrefix="/wiki/Akvopedia_mobile" android:scheme="https" />
             </intent-filter>
             <intent-filter android:label="@string/intent_share_search_label">
                 <action android:name="android.intent.action.SEND" />
