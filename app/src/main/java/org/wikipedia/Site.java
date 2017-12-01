@@ -155,7 +155,7 @@ public class Site implements Parcelable {
      */
     @NonNull
     public String path(@NonNull String segment) {
-        return "/s_wiki/" + segment;
+        return "/w/" + segment;
     }
 
     /**

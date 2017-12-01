@@ -110,7 +110,7 @@ public class DefaultUserOptionDataClient implements UserOptionDataClient {
     }
 
     private interface Client {
-        String ACTION = "s_wiki/api.php?format=json&formatversion=2&action=";
+        String ACTION = "w/api.php?format=json&formatversion=2&action=";
 
         @GET(ACTION + "query&meta=userinfo&uiprop=options")
         @NonNull Call<MwQueryResponse<QueryUserInfo>> get();

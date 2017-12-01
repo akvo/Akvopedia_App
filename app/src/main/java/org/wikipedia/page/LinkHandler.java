@@ -50,7 +50,7 @@ public abstract class LinkHandler implements CommunicationBridge.JSEventListener
     public void onUrlClick(String href) {
         if (href.startsWith("//")) {
             // That's a protocol specific link! Make it https!
-            href = "http:" + href;
+            href = "https:" + href;
         }
         Log.d("Wikipedia", "Link clicked was " + href);
         if (href.startsWith("/wiki/")) {

@@ -310,7 +310,7 @@ public final class Prefs {
     @NonNull
     public static String getRestbaseUriFormat() {
         return StringUtil.defaultIfBlank(getString(R.string.preference_key_restbase_uri_format, null),
-                "%1$s://%2$s/restbase/rest_v1/");
+                "%1$s://%2$s/api/rest_v1/");
     }
 
     @NonNull
@@ -320,7 +320,7 @@ public final class Prefs {
     }
 
     public static boolean getMediaWikiBaseUriSupportsLangCode() {
-        return getBoolean(R.string.preference_key_mediawiki_base_uri_supports_lang_code, false);
+        return getBoolean(R.string.preference_key_mediawiki_base_uri_supports_lang_code, true);
     }
 
     public static long getLastRunTime(@NonNull String task) {
@@ -408,7 +408,7 @@ public final class Prefs {
     }
 
     public static boolean isLinkPreviewEnabled() {
-        return getBoolean(R.string.preference_key_show_link_previews, false);
+        return getBoolean(R.string.preference_key_show_link_previews, true);
     }
 
     public static int getReadingListSortMode(int defaultValue) {

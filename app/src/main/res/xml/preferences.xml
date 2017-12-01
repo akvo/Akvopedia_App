@@ -16,7 +16,7 @@
             />
         <SwitchPreferenceCompat
             android:key="@string/preference_key_show_link_previews"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:title="@string/preference_title_show_link_previews"
             android:summary="@string/preference_summary_show_link_previews"
             />

@@ -25,7 +25,7 @@ public class UriTypeAdapter extends TypeAdapter<Uri> {
         // TODO: previously, only host parts were preserved for Site.domain. Remove in September
         //       2016 once Gson has had a chance to deserialize.
         if (!url.startsWith("http")) {
-            url = "http://" + url;
+            url = "https://" + url;
         }
 
         return Uri.parse(url);

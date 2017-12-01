@@ -52,7 +52,7 @@ android {
         preDexLibraries = preDexEnabled
     }
     defaultConfig {
-        applicationId 'org.akvopedia'
+        applicationId 'org.wikipedia'
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 147

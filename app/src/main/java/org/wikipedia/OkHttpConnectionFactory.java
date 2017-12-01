@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.Proxy;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 import okhttp3.Cache;
 import okhttp3.CookieJar;
@@ -54,9 +53,6 @@ public class OkHttpConnectionFactory implements HttpRequest.ConnectionFactory {
         return new OkHttpClient.Builder()
                 .cookieJar(cookieJar)
                 .cache(HTTP_CACHE)
-                .connectTimeout(10, TimeUnit.SECONDS)
-                .writeTimeout(10, TimeUnit.SECONDS)
-                .readTimeout(30, TimeUnit.SECONDS)
                 .addInterceptor(loggingInterceptor);
     }
 

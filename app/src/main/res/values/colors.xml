@@ -6,7 +6,7 @@
     <color name="actionbar_disabled">#a0a0a0</color>
     <color name="button_disabled">#bebebe</color>
     <color name="preview_header_background">#d0d0d0</color>
-    <color name="akvopedia_pink">#DB87C9</color>
+    <color name="blue_progressive">#347bff</color>
     <color name="blue_progressive_dark">#1a3d7f</color>
     <color name="blue_liberal">#36b</color>
     <color name="green_progressive">#42a078</color>
@@ -21,7 +21,6 @@
     <color name="gray_highlight">#808080</color>
     <color name="page_info_heading">#555</color>
     <color name="window_background">#303030</color>
-    <color name="akvopedia_splash">#fff</color>
     <!-- TODO: replace this color when changing the toolbar color. -->
     <color name="actionbar_background">@color/window_background</color>
     <color name="actionbar_highlight">#808080</color>
@@ -44,7 +43,7 @@
     <color name="subtle_gray_light">#f0f0f0</color>
     <color name="list_separator_light">#ccc</color>
     <color name="tab_shadow_light">#c0c0c0</color>
-    <color name="toc_button_light">#DB87C9</color>
+    <color name="toc_button_light">#009688</color>
     <color name="tool_tip_default_light">@android:color/black</color>
     <color name="link_preview_toolbar_light">#404040</color>
     <color name="link_preview_background_light">#f0f0f0</color>
@@ -58,7 +57,7 @@
 
     <color name="link_dark">#2b6fb2</color>
     <color name="button_dark">#2b6fb2</color>
-    <color name="window_background_dark">#fff</color>
+    <color name="window_background_dark">#000</color>
     <color name="page_background_dark">#000</color>
     <color name="search_background_dark">#303030</color>
     <color name="toc_background_dark">#0c0c0c</color>
@@ -69,7 +68,7 @@
     <color name="subtle_gray_dark">#141414</color>
     <color name="list_separator_dark">#606060</color>
     <color name="tab_shadow_dark">#505050</color>
-    <color name="toc_button_dark">#DB87C9</color>
+    <color name="toc_button_dark">#005850</color>
     <color name="tool_tip_default_dark">#303030</color>
     <color name="link_preview_toolbar_dark">#606060</color>
     <color name="link_preview_background_dark">#303030</color>

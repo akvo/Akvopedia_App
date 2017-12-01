@@ -73,7 +73,7 @@ public class NavDrawerHelper {
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_item_feed:
-                        activity.loadMainPageInCurrentTab();
+                        activity.showFeed();
                         // TODO: [Feed] add Feed logging.
                         break;
                     case R.id.nav_item_history:
@@ -84,8 +84,24 @@ public class NavDrawerHelper {
                         activity.pushFragment(new ReadingListsFragment());
                         funnel.logReadingLists();
                         break;
+                    case R.id.nav_item_nearby:
+                        activity.pushFragment(new NearbyFragment());
+                        funnel.logNearby();
+                        break;
+                    case R.id.nav_item_more:
+                        launchSettingsActivity();
+                        funnel.logMore();
+                        break;
                     case R.id.nav_item_logout:
                         logOut();
+                        break;
+                    case R.id.nav_item_random:
+                        activity.getRandomHandler().doVisitRandomArticle();
+                        activity.closeNavDrawer();
+                        funnel.logRandom();
+                        break;
+                    case R.id.nav_item_donate:
+                        openDonatePage();
                         break;
                     default:
                         return false;
@@ -170,6 +186,8 @@ public class NavDrawerHelper {
             return R.id.nav_item_history;
         } else if (fragment == ReadingListsFragment.class) {
             return R.id.nav_item_reading_lists;
+        } else if (fragment == NearbyFragment.class) {
+            return R.id.nav_item_nearby;
         }
         return null;
     }
@@ -189,13 +207,13 @@ public class NavDrawerHelper {
      * Add Wikipedia Zero entry to nav menu if W0 is active.
      */
     private void updateWikipediaZeroStatus() {
-        // MenuItem wikipediaZeroText = activity.getNavMenu().findItem(R.id.nav_item_zero);
-        // if (app.getWikipediaZeroHandler().isZeroEnabled()) {
-        //     wikipediaZeroText.setTitle(app.getWikipediaZeroHandler().getZeroConfig().getMessage());
-        //     wikipediaZeroText.setVisible(true);
-        // } else {
-        //     wikipediaZeroText.setVisible(false);
-        // }
+        MenuItem wikipediaZeroText = activity.getNavMenu().findItem(R.id.nav_item_zero);
+        if (app.getWikipediaZeroHandler().isZeroEnabled()) {
+            wikipediaZeroText.setTitle(app.getWikipediaZeroHandler().getZeroConfig().getMessage());
+            wikipediaZeroText.setVisible(true);
+        } else {
+            wikipediaZeroText.setVisible(false);
+        }
     }
 
     /**

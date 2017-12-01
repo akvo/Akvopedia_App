@@ -457,7 +457,7 @@ public class MainActivity extends ThemedActionBarActivity implements FeedFragmen
     }
 
     public void setNavMenuItemRandomEnabled(boolean enabled) {
-        //navMenu.findItem(R.id.nav_item_random).setEnabled(enabled);
+        navMenu.findItem(R.id.nav_item_random).setEnabled(enabled);
     }
 
     /** @return True if the contextual action bar is open. */
@@ -514,7 +514,7 @@ public class MainActivity extends ThemedActionBarActivity implements FeedFragmen
         } else if (TimeUnit.MILLISECONDS.toDays(System.currentTimeMillis() - Prefs.pageLastShown()) == 0) {
             loadMainPageIfNoTabs();
         } else {
-            loadMainPageInCurrentTab();
+            showFeed();
         }
     }
 
@@ -633,7 +633,7 @@ public class MainActivity extends ThemedActionBarActivity implements FeedFragmen
 
     public void resetAfterClearHistory() {
         Prefs.clearTabs();
-        loadMainPageInCurrentTab();
+        showFeed();
     }
 
     private void beforeFragmentChanged() {
@@ -750,10 +750,6 @@ public class MainActivity extends ThemedActionBarActivity implements FeedFragmen
 
     public void loadMainPageInForegroundTab() {
         loadMainPage(true, TabPosition.NEW_TAB_FOREGROUND, false);
-    }
-
-    public void loadMainPageInCurrentTab() {
-        loadMainPage(false, TabPosition.CURRENT_TAB, false);
     }
 
     /**

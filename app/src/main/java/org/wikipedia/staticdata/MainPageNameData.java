@@ -3,22 +3,19 @@
    TO HAVE YOUR CHANGES OVERWRITTEN */
 package org.wikipedia.staticdata;
 
-import android.support.annotation.NonNull;
+import java.util.*;
 
-import java.util.HashMap;
+import android.support.annotation.NonNull;
 
 public final class MainPageNameData {
 
     private static HashMap<String, String> DATA_MAP;
 
-    private MainPageNameData() {
-    }
-
     @SuppressWarnings({"checkstyle:methodlength", "SpellCheckingInspection"})
     private static void setupData() {
         final int size = 295;
         DATA_MAP = new HashMap<>(size, 1.0f);
-        DATA_MAP.put("en", "Akvopedia mobile"); // change home page of app here
+        DATA_MAP.put("en", "Main Page");
         DATA_MAP.put("sv", "Portal:Huvudsida");
         DATA_MAP.put("ceb", "Unang Panid");
         DATA_MAP.put("de", "Wikipedia:Hauptseite");
@@ -311,11 +308,10 @@ public final class MainPageNameData {
         DATA_MAP.put("mus", "Main Page");
         DATA_MAP.put("hz", "Main Page");
         DATA_MAP.put("kr", "Main Page");
-        DATA_MAP.put("test", "Akvopedia mobile"); // change home page of app here for testing
+        DATA_MAP.put("test", "Main Page");
     }
 
-    @NonNull
-    public static String valueFor(String key) {
+    @NonNull public static String valueFor(String key) {
         if (DATA_MAP == null) {
             setupData();
         }
@@ -324,5 +320,8 @@ public final class MainPageNameData {
             return DATA_MAP.get(key);
         }
         return DATA_MAP.get("en");
+    }
+
+    private MainPageNameData() {
     }
 }

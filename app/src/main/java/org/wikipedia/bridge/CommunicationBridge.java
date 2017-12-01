@@ -45,7 +45,6 @@ public class CommunicationBridge {
 
         webView.getSettings().setJavaScriptEnabled(true);
 
-        webView.getSettings().setDomStorageEnabled(true);
         webView.setWebChromeClient(new CommunicatingChrome());
         webView.addJavascriptInterface(marshaller, "marshaller");
 
