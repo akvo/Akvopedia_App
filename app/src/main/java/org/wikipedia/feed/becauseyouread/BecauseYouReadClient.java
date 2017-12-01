@@ -113,7 +113,7 @@ public class BecauseYouReadClient implements FeedClient {
     }
 
     private interface MwApiSearchClient {
-        @GET("w/api.php?format=json&formatversion=2&action=query"
+        @GET("s_wiki/api.php?format=json&formatversion=2&action=query"
                 + "&prop=pageterms|pageimages|pageprops&ppprop=mainpage|disambiguation"
                 + "&wbptterms=description&generator=search&gsrnamespace=0&gsrwhat=text"
                 + "&gsrinfo=&gsrprop=redirecttitle&gsrlimit=" + Constants.SUGGESTION_REQUEST_ITEMS
