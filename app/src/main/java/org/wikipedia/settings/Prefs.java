@@ -320,7 +320,7 @@ public final class Prefs {
     }
 
     public static boolean getMediaWikiBaseUriSupportsLangCode() {
-        return getBoolean(R.string.preference_key_mediawiki_base_uri_supports_lang_code, true);
+        return getBoolean(R.string.preference_key_mediawiki_base_uri_supports_lang_code, false);
     }
 
     public static long getLastRunTime(@NonNull String task) {
