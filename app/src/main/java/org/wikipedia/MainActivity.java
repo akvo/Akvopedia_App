@@ -457,7 +457,7 @@ public class MainActivity extends ThemedActionBarActivity implements FeedFragmen
     }
 
     public void setNavMenuItemRandomEnabled(boolean enabled) {
-        navMenu.findItem(R.id.nav_item_random).setEnabled(enabled);
+        //navMenu.findItem(R.id.nav_item_random).setEnabled(enabled);
     }
 
     /** @return True if the contextual action bar is open. */

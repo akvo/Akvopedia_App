@@ -32,7 +32,7 @@ public class RandomHandler {
     }
 
     private void setNavMenuItemEnabled(boolean enabled) {
-        activity.setNavMenuItemRandomEnabled(enabled);
+        //activity.setNavMenuItemRandomEnabled(enabled);
     }
 
     private void setProgressBarLoading(boolean loading) {
