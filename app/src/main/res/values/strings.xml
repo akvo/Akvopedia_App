@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name_prod">Wikipedia</string>
-    <string name="app_name_beta" tools:ignore="UnusedResources">Wikipedia Beta</string>
-    <string name="app_name_alpha" tools:ignore="UnusedResources">Wikipedia Alpha</string>
+    <string name="app_name_prod">Akvopedia</string>
+    <string name="app_name_beta" tools:ignore="UnusedResources">Akvopedia Beta</string>
+    <string name="app_name_alpha" tools:ignore="UnusedResources">Akvopedia Alpha</string>
 
     <string name="wikimedia">Wikimedia</string>
 
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
-    <string name="search_hint">Search Wikipedia</string>
+    <string name="search_hint">Search Akvopedia</string>
     <string name="nav_item_history">History</string>
     <string name="error_network_error">Cannot connect to the Internet.</string>
     <string name="page_error_retry">Retry</string>
@@ -56,7 +56,7 @@
     <string name="content_license_html"><![CDATA[Content is available under <a href=\"//creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> unless otherwise noted]]></string>
     <string name="edit_save_action_license_logged_in"><![CDATA[By saving, you agree to the <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a>, and to irrevocably release your contributions under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license.]]></string>
     <string name="edit_save_action_license_anon"><![CDATA[By saving, you agree to the <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a>, and to irrevocably release your contributions under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license. Edits will be attributed to the IP address of your device. If you <a href="https://#login">log in</a>, you will have more privacy.]]></string>
-    <string name="preference_title_language">Wikipedia language</string>
+    <string name="preference_title_language">Akvopedia language</string>
     <string name="preference_languages_filter_hint">Search</string>
     <string name="langlinks_filter_hint">Search</string>
     <string name="langlinks_empty">This page is not available in other languages.</string>
@@ -84,7 +84,7 @@
     <string name="login_password_hint">Password</string>
     <string name="login_password_show_check">Display password</string>
     <string name="menu_login">Log in</string>
-    <string name="login_activity_title">Log in to Wikipedia</string>
+    <string name="login_activity_title">Log in to Akvopedia</string>
     <string name="login_in_progress_dialog_message">Logging you in…</string>
     <string name="login_error_wrong_password">Incorrect password</string>
     <string name="login_error_wrong_username">Incorrect username</string>
@@ -100,7 +100,7 @@
     <string name="delete_selected_history">Delete</string>
     <string name="wp_stylized"><![CDATA[<big>W</big>IKIPEDI<big>A</big>]]></string>
     <string name="create_account_username_hint">Username</string>
-    <string name="login_create_account_link">Don\'t have an account? Join Wikipedia</string>
+    <string name="login_create_account_link">Don\'t have an account? Join Akvopedia</string>
     <string name="create_account_login_link">Already have an account? Log in</string>
     <string name="create_account_activity_title">Create an account</string>
     <string name="dialog_create_account_checking_progress">Verifying</string>
@@ -121,7 +121,7 @@
     <string name="create_account_next">Next</string>
     <string name="create_account_button">Create account</string>
     <string name="preferences_general_heading">General</string>
-    <string name="wikipedia_app_faq">Wikipedia App FAQ</string>
+    <string name="wikipedia_app_faq">Akvopedia App FAQ</string>
     <string name="zero_charged_verbiage">Wikipedia Zero is off</string>
     <string name="zero_search_hint">Search Wikipedia Zero</string>
     <string name="zero_warn_when_leaving">Warn if leaving Wikipedia Zero</string>
@@ -155,7 +155,7 @@
     <string name="page_protected_can_not_edit_title">This page is protected</string>
     <string name="settings_item_preferences">Settings</string>
     <string name="settings_activity_title">Settings</string>
-    <string name="about_description">About the Wikipedia app</string>
+    <string name="about_description">About the Akvopedia app</string>
     <string name="privacy_policy_description">Privacy policy</string>
     <string name="terms_of_use_description">Terms of use</string>
     <string name="privacy_policy_url">https://m.wikimediafoundation.org/wiki/Privacy_Policy</string>
@@ -203,9 +203,9 @@
     <string name="table_infobox">Quick facts</string>
     <string name="table_other">More information</string>
     <string name="table_close">Close</string>
-    <string name="widget_name_featured_page">Wikipedia featured page</string>
+    <string name="widget_name_featured_page">Akvopedia featured page</string>
     <string name="widget_title_featured_page">Today\'s featured page:</string>
-    <string name="widget_name_search">Wikipedia search</string>
+    <string name="widget_name_search">Akvopedia search</string>
     <string name="wiktionary_no_definitions_found">No definitions found.</string>
     <string name="alpha_update_notification_title">New alpha update available</string>
     <string name="alpha_update_notification_text">Tap to download</string>
@@ -224,7 +224,7 @@
     <string name="gallery_error_video_failed">Could not play the video.</string>
     <string name="gallery_save_image_write_permission_rationale">Permission to write to storage on your device is required for saving images. Please try again, and grant the requested permission.</string>
     <string name="err_cannot_save_file">Cannot save file</string>
-    <string name="snippet_share_intro">\"%1$s\" on @Wikipedia: %2$s</string>
+    <string name="snippet_share_intro">\"%1$s\" on @WAkvopedia: %2$s</string>
     <string name="expand_refs">Tap to expand</string>
     <string name="share_snippet_button">Share as image</string>
     <string name="share_normal_button">Share as text</string>
@@ -261,7 +261,7 @@
     <string name="crash_report_dialog_always_send_button">Always send</string>
     <string name="crash_report_dialog_send_button">Send</string>
     <string name="crash_report_activity_title">Application error</string>
-    <string name="crash_report_relaunch_or_quit">We\'re sorry, the Wikipedia app has experienced an error and was terminated.\n\nWould you like to start over or quit?</string>
+    <string name="crash_report_relaunch_or_quit">We\'re sorry, the Akvopedia app has experienced an error and was terminated.\n\nWould you like to start over or quit?</string>
     <string name="crash_report_relaunch">Start over</string>
     <string name="crash_report_quit">Quit</string>
     <!-- /Crash reporter -->
@@ -319,8 +319,8 @@
     <string name="view_continue_reading_card_title">Continue reading</string>
     <string name="view_because_you_read_card_title">Because you read</string>
     <string name="view_random_card_title">Randomizer</string>
-    <string name="view_random_card_subtitle">Read a random article from Wikipedia</string>
-    <string name="view_main_page_card_title">Today on Wikipedia</string>
+    <string name="view_random_card_subtitle">Read a random article from Akvopedia</string>
+    <string name="view_main_page_card_title">Today on Akvopedia</string>
     <string name="view_main_page_card_subtitle">Main page on %s</string>
     <string name="view_featured_image_card_title">Picture of the day</string>
     <string name="view_featured_image_card_download">Download</string>
