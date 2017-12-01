@@ -70,7 +70,7 @@ public final class UriUtil {
     }
 
     public static boolean isValidPageLink(Uri uri) {
-        return ("wikipedia.org".equals(uri.getAuthority()) && !TextUtils.isEmpty(uri.getPath())
+        return ("akvopedia.org".equals(uri.getAuthority()) && !TextUtils.isEmpty(uri.getPath())
                 && uri.getPath().startsWith("/wiki"));
     }
 
