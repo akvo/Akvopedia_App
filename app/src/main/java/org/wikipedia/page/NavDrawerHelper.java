@@ -73,7 +73,7 @@ public class NavDrawerHelper {
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_item_feed:
-                        activity.showFeed();
+                        activity.loadMainPageInCurrentTab();
                         // TODO: [Feed] add Feed logging.
                         break;
                     case R.id.nav_item_history:
