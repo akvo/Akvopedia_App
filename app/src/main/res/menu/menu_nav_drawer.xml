@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:id="@+id/group_main">
-        <item android:id="@+id/nav_item_feed"
-            android:title="@string/nav_item_feed"
+        <item
+            android:id="@+id/nav_item_feed"
+            android:checkable="true"
             android:icon="@drawable/ic_globe"
+            android:title="@string/nav_item_feed" />
+        <item
+            android:id="@+id/nav_item_history"
             android:checkable="true"
-            />
-        <item android:id="@+id/nav_item_history"
-            android:title="@string/nav_item_history"
             android:icon="@drawable/ic_restore_black_24dp"
+            android:title="@string/nav_item_history" />
+        <item
+            android:id="@+id/nav_item_reading_lists"
             android:checkable="true"
-            />
-        <item android:id="@+id/nav_item_reading_lists"
-            android:title="@string/nav_item_reading_lists"
             android:icon="@drawable/ic_bookmark_black_24dp"
-            android:checkable="true"
-            />
+            android:title="@string/nav_item_reading_lists" />
+    </group>
+    <group>
+        <item
+            android:id="@+id/nav_item_about"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="@string/about_app" />
     </group>
     <group android:id="@+id/group_user">
-        <item android:id="@+id/nav_item_logout"
-            android:title="@string/preference_title_logout"
+        <item
+            android:id="@+id/nav_item_logout"
             android:icon="@drawable/ic_exit_to_app_black_24dp"
-            />
+            android:title="@string/preference_title_logout" />
     </group>
 </menu>
