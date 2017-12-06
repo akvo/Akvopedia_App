@@ -262,11 +262,15 @@ public final class Prefs {
     }
 
     public static boolean useRestBaseSetManually() {
-        return getBoolean(R.string.preference_key_use_restbase_manual, false);
+        //Akvopedia: disable RestBase api
+        return true;
+//        return getBoolean(R.string.preference_key_use_restbase_manual, false);
     }
 
     public static boolean useRestBase() {
-        return getBoolean(R.string.preference_key_use_restbase, false);
+        //Akvopedia: disable RestBase api
+        return false;
+//        return getBoolean(R.string.preference_key_use_restbase, false);
     }
 
     public static void setUseRestBase(boolean enabled) {
