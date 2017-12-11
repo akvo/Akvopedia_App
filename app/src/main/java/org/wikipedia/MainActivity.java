@@ -48,8 +48,6 @@ import android.widget.TextView;
 import com.squareup.otto.Bus;
 import com.squareup.otto.Subscribe;
 
-import net.hockeyapp.android.metrics.MetricsManager;
-
 import org.wikipedia.activity.ActivityUtil;
 import org.wikipedia.activity.ThemedActionBarActivity;
 import org.wikipedia.analytics.IntentFunnel;
@@ -231,8 +229,8 @@ public class MainActivity extends ThemedActionBarActivity implements FeedFragmen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         app = (WikipediaApp) getApplicationContext();
-        MetricsManager.register(this, app);
-        app.checkCrashes(this);
+//        MetricsManager.register(this, app);
+//        app.checkCrashes(this);
 
         if (ApiUtil.hasKitKat()) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -699,8 +697,8 @@ public class MainActivity extends ThemedActionBarActivity implements FeedFragmen
         // Close the link preview, if one is open.
         hideLinkPreview();
 
-        app.putCrashReportProperty("api", title.getSite().authority());
-        app.putCrashReportProperty("title", title.toString());
+//        app.putCrashReportProperty("api", title.getSite().authority());
+//        app.putCrashReportProperty("title", title.toString());
 
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             closeNavDrawer();

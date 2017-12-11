@@ -52,7 +52,7 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int from, int to) {
         L.i("Upgrading from=" + from + " to=" + to);
-        WikipediaApp.getInstance().putCrashReportProperty("fromDatabaseVersion", String.valueOf(from));
+//        WikipediaApp.getInstance().putCrashReportProperty("fromDatabaseVersion", String.valueOf(from));
         for (DatabaseTable<?> table : databaseTables) {
             table.upgradeSchema(sqLiteDatabase, from, to);
         }

@@ -122,7 +122,7 @@ import java.util.List;
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 L.logRemoteError(new RemoteLogException(newValue.toString()));
-                WikipediaApp.getInstance().checkCrashes(getActivity());
+//                WikipediaApp.getInstance().checkCrashes(getActivity());
                 return true;
             }
         };

@@ -17,7 +17,7 @@ public class CrashReportActivity extends SingleFragmentActivity<CrashReportFragm
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        WikipediaApp.getInstance().checkCrashes(this);
+//        WikipediaApp.getInstance().checkCrashes(this);
     }
 
     @Override
