@@ -1,75 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Stichting Akvo (Akvo Foundation)
+  ~
+  ~ This file is part of Akvo Caddisfly.
+  ~
+  ~ Akvo Caddisfly is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Akvo Caddisfly is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Akvo Caddisfly. If not, see <http://www.gnu.org/licenses/>.
+  -->
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/about_scrollview"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/window_background_color">
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/about_container"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:background="@color/list_item_text_primary_light"
+        android:padding="15dp"
+        android:text="@string/software_notices"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
-        <TextView
-            style="?android:textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/app_name" />
+    <ScrollView
+        android:id="@+id/about_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            style="?android:textAppearanceSmall"
+        <LinearLayout
+            android:id="@+id/about_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/software_notices" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <TextView
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/initial_source_code" />
+            <TextView
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/software_incorporates_material" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layoutDirection="ltr"
-            android:lineSpacingMultiplier="1.2"
-            android:text="@string/contributors_list"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#555"
-            android:textIsSelectable="true" />
+            <TextView
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/apache_license_2"
+                android:textStyle="bold" />
 
-        <TextView
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/about_libraries_heading" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/apache_software"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#555"
+                android:textIsSelectable="true" />
 
-        <TextView
-            android:id="@+id/activity_about_libraries"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layoutDirection="ltr"
-            android:lineSpacingMultiplier="1.2"
-            android:text="@string/libraries_list"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#555"
-            android:textColorLink="?attr/link_color"
-            android:textIsSelectable="true" />
+            <TextView
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/bsd_license"
+                android:textStyle="bold" />
 
-    </LinearLayout>
-</ScrollView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/bsd_software"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#555"
+                android:textIsSelectable="true" />
+
+            <TextView
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/mit_license"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/mit_software"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#555"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

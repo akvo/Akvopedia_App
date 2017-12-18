@@ -1,10 +1,12 @@
 package org.wikipedia.server;
 
+import android.support.annotation.NonNull;
+
 import org.wikipedia.server.mwapi.MwPageLead;
 import org.wikipedia.server.mwapi.MwServiceError;
 
-import android.support.annotation.NonNull;
-
+import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertNull;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -13,11 +15,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
  * Common test code for the two PageLead variants.
  */
 public abstract class BasePageLeadTest {
-    protected static final int ID = 15580374;
-    protected static final long REVISION = 664887982L;
-    protected static final int LANGUAGE_COUNT = 45;
-    protected static final String LAST_MODIFIED_DATE = "2015-05-31T17:32:11Z";
-    protected static final String MAIN_PAGE = "Main Page";
+    private static final int ID = 15580374;
+    private static final long REVISION = 664887982L;
+    private static final int LANGUAGE_COUNT = 45;
+    private static final String LAST_MODIFIED_DATE = "2015-05-31T17:32:11Z";
+    private static final String MAIN_PAGE = "Main Page";
 
     @NonNull
     public static String getEnglishMainPageJson() {
@@ -47,13 +49,14 @@ public abstract class BasePageLeadTest {
         assertThat(props.getDescription(), is("Main page of a Wikimedia project"));
         assertThat(props.getLeadImageUrl(), equalTo(null));
         assertThat(props.getLeadImageName(), equalTo(null));
+        assertNotNull(props.getSections());
         assertThat(props.getSections().size(), is(1));
         assertThat(props.getSections().get(0).getId(), is(0));
         assertThat(props.getSections().get(0).getContent(), is("My lead section text"));
         assertThat(props.getSections().get(0).getLevel(), is(1));
         assertThat(props.getSections().get(0).getAnchor(), equalTo(""));
         assertThat(props.getSections().get(0).getHeading(), equalTo(""));
-        assertThat(props.getFirstAllowedEditorRole(), is("made_up_role1"));
+        assertNull(props.getFirstAllowedEditorRole());
         assertThat(props.isEditable(), is(false));
         assertThat(props.isMainPage(), is(true));
         assertThat(props.isDisambiguation(), is(false));

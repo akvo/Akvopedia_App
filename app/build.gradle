@@ -6,12 +6,6 @@ import com.android.ddmlib.DdmPreferences
 
 import java.util.concurrent.TimeUnit
 
-// Copy the signing.properties.sample file to ~/.sign/signing.properties and adjust the values.
-final File PROD_PROPS_FILE = new File(System.getProperty('user.home'), '.sign/signing.properties')
-final File REPO_PROPS_FILE = new File('repo.properties')
-final Properties PROD_PROPS = loadProperties(PROD_PROPS_FILE)
-final Properties REPO_PROPS = loadProperties(REPO_PROPS_FILE)
-
 final int ADB_TIMEOUT = TimeUnit.MINUTES.toMillis(5)
 final boolean continuousIntegrationBuild = System.getenv('JENKINS_HOME') != null
 final boolean preDexEnabled = hasProperty('pre.dex') ?
@@ -32,8 +26,8 @@ static def getDate() {
     return formattedDate
 }
 
-def computeVersionName(label) {
-    return "1.0.0 - alpha 2"
+static def computeVersionName(label) {
+    return "1.0.0"
 }
 
 final JavaVersion JAVA_VERSION = JavaVersion.VERSION_1_7
@@ -49,11 +43,11 @@ android {
         preDexLibraries = preDexEnabled
     }
     defaultConfig {
-        applicationId 'org.akvopedia'
+        applicationId 'org.akvo.akvopedia'
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 148
-        testApplicationId 'org.wikipedia.test'
+        versionCode 1
+        testApplicationId 'org.akvo.akvopedia.test'
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
     }
@@ -69,10 +63,10 @@ android {
 
     signingConfigs {
         prod {
-            setSigningConfigKey(prod, PROD_PROPS)
-        }
-        debug {
-            setSigningConfigKey(debug, REPO_PROPS)
+            storeFile file(AKVOPEDIA_RELEASE_STORE_FILE)
+            storePassword AKVOPEDIA_RELEASE_STORE_PASSWORD
+            keyAlias AKVOPEDIA_RELEASE_KEY_ALIAS
+            keyPassword AKVOPEDIA_RELEASE_KEY_PASSWORD
         }
     }
 
@@ -81,6 +75,8 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             testProguardFile 'test-proguard-rules.pro'
+            signingConfig signingConfigs.prod
+            zipAlignEnabled true
         }
     }
 
@@ -121,7 +117,7 @@ android {
         custom {
             versionName computeVersionName(customChannel)
             // next line is for injecting a custom channel value into the custom/AndroidManifest.xml
-            manifestPlaceholders = [customChannel:getProperty('customChannel').toString()]
+            manifestPlaceholders = [customChannel: getProperty('customChannel').toString()]
             signingConfig signingConfigs.prod
         }
     }
@@ -129,12 +125,13 @@ android {
     // while we still have lint errors; remove once those are fixed
     lintOptions {
         disable 'MissingTranslation'
-        warning 'NewApi' // until https://code.google.com/p/android/issues/detail?id=137195 is released
+        warning 'NewApi'
+        // until https://code.google.com/p/android/issues/detail?id=137195 is released
         disable 'InvalidPackage' // required by Butter Knife
     }
 
     packagingOptions {
-        exclude 'META-INF/services/javax.annotation.processing.Processor' // required by Butter Knife
+        exclude 'META-INF/services/javax.annotation.processing.Processor'// required by Butter Knife
 
         // For Espresso testing libraries. See http://stackoverflow.com/q/33800924/970346.
         exclude 'META-INF/maven/com.google.guava/guava/pom.xml'
@@ -147,7 +144,9 @@ def compileSubprojectOrModule = { String projectName,
                                   String excludeGroup = null,
                                   String excludeModule = null ->
     def dependency = project.findProject(projectName) ?: moduleName
-    project.dependencies.add('compile', dependency, {exclude group: excludeGroup, module: excludeModule })
+    project.dependencies.add('compile', dependency, {
+        exclude group: excludeGroup, module: excludeModule
+    })
 }
 
 dependencies {
@@ -175,7 +174,7 @@ dependencies {
     compile "com.facebook.fresco:animated-gif:$frescoVersion"
     compile "com.facebook.fresco:fresco:$frescoVersion"
     compile "com.facebook.fresco:imagepipeline-okhttp3:$frescoVersion"
-    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.google.code.gson:gson:2.8.2'
     compile "com.squareup.okhttp3:okhttp-urlconnection:$okHttpVersion" // for JavaNetCookieJar
     compile "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
     compile 'com.squareup:otto:1.3.8'
@@ -201,7 +200,8 @@ dependencies {
     androidTestCompile "com.android.support:support-annotations:$supportVersion"
 
     androidTestCompile "com.android.support.test:rules:$testingSupportVersion" // JUnit Rules
-    androidTestCompile "com.android.support.test:runner:$testingSupportVersion" // Android JUnit Runner
+    androidTestCompile "com.android.support.test:runner:$testingSupportVersion"
+    // Android JUnit Runner
     androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoVersion"
 
     // Espresso-contrib for DatePicker, RecyclerView, Drawer actions, Accessibility checks,
@@ -222,27 +222,6 @@ dependencies {
     androidTestCompile "com.android.support.test.espresso:espresso-idling-resource:$espressoVersion"
 
     androidTestCompile 'com.squareup.spoon:spoon-client:1.7.0'
-}
-
-private setSigningConfigKey(config, Properties props) {
-    if (props) {
-        config.storeFile = props['keystore'] == null ? null : file(props['keystore'])
-        config.storePassword = props['store.pass']
-        config.keyAlias = props['key.alias']
-        config.keyPassword = props['key.pass']
-    }
-    return config
-}
-
-private static Properties loadProperties(File file) {
-    Properties props = null
-    if (file.canRead()) {
-        props = new Properties()
-        props.load(new FileInputStream(file))
-    } else {
-        System.err.println "\"${file}\" not found"
-    }
-    return props
 }
 
 addSyncContentProviderAuthority 'useroption', 'user_option'

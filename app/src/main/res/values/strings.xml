@@ -79,7 +79,7 @@
     <string name="title_captcha">Enter CAPTCHA</string>
     <string name="edit_section_captcha_reload">Tap CAPTCHA to reload</string>
     <string name="edit_saved_page_refresh">This saved page may be out of date, and must be refreshed for editing to be enabled. Would you like to refresh the page?</string>
-    <string name="nav_item_login"></string>
+    <string name="nav_item_login" />
     <string name="login_username_hint">Username</string>
     <string name="login_password_hint">Password</string>
     <string name="login_password_show_check">Display password</string>
@@ -346,7 +346,17 @@
     <string name="app_slogan">The open water &amp; sanitation resource</string>
     <string name="copyrightMessage">Copyright © Stichting Akvo</string>
     <string name="legalInformation">Legal information</string>
-    <string name="software_notices">Software Notices</string>
-    <string name="initial_source_code">Initial source code</string>
     <!-- /About the app -->
+
+
+    <!-- Software notices -->
+    <string name="software_incorporates_material">This software incorporates material from the projects listed below</string>
+    <string name="apache_license_2">Apache License 2.0</string>
+    <string name="mit_license">MIT License</string>
+    <string name="cca_share_license">CC BY-NC-SA 4.0 – International</string>
+    <string name="cca_license">CC BY 4.0 International</string>
+    <string name="bsd_license">BSD License</string>
+    <string name="software_notices">Software Notices</string>
+    <string name="eclipse_public_license">Eclipse Public License 1.0</string>
+    <!-- /Software notices -->
 </resources>

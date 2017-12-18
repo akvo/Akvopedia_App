@@ -45,4 +45,37 @@
         <!-- end of https://github.com/ragunathjawahar/android-saripaar/blob/master/README.md -->
         (<a href="file:///android_asset/licenses/Saripaar">license</a>)
     </string>
+
+    <!--Software Notices-->
+    <string name="lovibond_software"><a href="http://www.lovibond.com/">Lovibond Testing Instruction Visuals (MD610)</a></string>
+    <string name="apache_software"><a href="https://github.com/wikimedia/apps-android-wikipedia">Wikipedia app by Wikimedia</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://source.android.com/setup/licenses">Android Open Source Project</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://github.com/JakeWharton/ButterKnife">ButterKnife</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://github.com/joel-costigliola/assertj-core">AssertJ</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://commons.apache.org/proper/commons-lang/">Commons Lang</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://github.com/mapbox/mapbox-android-sdk">Mapbox Android SDK</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://square.github.io/okhttp/">OkHttp</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://github.com/ryanjohn1/onboarding/">Onboarding</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://square.github.io/otto/">Otto</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://square.github.io/retrofit/">Retrofit</a>
+          &#160;&#160;&#8226;&#160;&#160;
+        <a href="https://github.com/ragunathjawahar/android-saripaar">Saripaar</a>
+    </string>
+    <string name="bsd_software"><a href="https://github.com/facebook/fresco">Fresco</a>
+    </string>
+    <string name="mit_software"><a href="https://github.com/kevinsawicki/http-request">Http-Request</a>
+    </string>
+    <string name="cca_software">
+        </string>
+    <string name="eclipse_software">
+        </string>
 </resources>
