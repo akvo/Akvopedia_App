@@ -69,3 +69,7 @@
 -keep class org.mediawiki.api.json.** {*;}
 -keep enum org.wikipedia.api.json.** { <init>(...); *; }
 # --- /Wikipedia ---
+
+-dontwarn com.facebook.infer.annotation.ReturnsOwnership
+-dontwarn com.facebook.infer.annotation.Functional
+-dontwarn com.facebook.infer.annotation.ThreadSafe

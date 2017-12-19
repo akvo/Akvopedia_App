@@ -11,6 +11,7 @@ gen-external-apklibs
 .gradle
 /local.properties
 /build
+**/release
 
 # IDE files
 *.iml
@@ -40,3 +41,4 @@ www/preview.css
 *.apk
 # Older releases
 /releases
+

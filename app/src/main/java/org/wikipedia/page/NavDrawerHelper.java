@@ -26,6 +26,7 @@ import org.wikipedia.login.LoginActivity;
 import org.wikipedia.nearby.NearbyFragment;
 import org.wikipedia.random.RandomHandler;
 import org.wikipedia.readinglist.ReadingListsFragment;
+import org.wikipedia.settings.AboutFragment;
 import org.wikipedia.settings.SettingsActivity;
 import org.wikipedia.util.FeedbackUtil;
 import org.wikipedia.util.UriUtil;
@@ -84,15 +85,18 @@ public class NavDrawerHelper {
                         activity.pushFragment(new ReadingListsFragment());
                         funnel.logReadingLists();
                         break;
+                    case R.id.nav_item_about:
+                        activity.pushFragment(new AboutFragment());
+                        break;
                     case R.id.nav_item_logout:
                         logOut();
                         break;
                     default:
                         return false;
                 }
-                clearItemHighlighting();
-                menuItem.setChecked(true);
-                activity.setNavItemSelected(true);
+//                clearItemHighlighting();
+//                menuItem.setChecked(true);
+//                activity.setNavItemSelected(true);
                 return true;
             }
         };

@@ -24,7 +24,6 @@ import org.wikipedia.analytics.FunnelManager;
 import org.wikipedia.analytics.SessionFunnel;
 import org.wikipedia.auth.AccountUtil;
 import org.wikipedia.crash.CrashReporter;
-import org.wikipedia.crash.hockeyapp.HockeyAppCrashReporter;
 import org.wikipedia.database.Database;
 import org.wikipedia.database.DatabaseClient;
 import org.wikipedia.database.contract.AppContentProviderContract;
@@ -162,7 +161,7 @@ public class WikipediaApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        initExceptionHandling();
+//        initExceptionHandling();
 
         // See Javadocs and http://developer.android.com/tools/support-library/index.html#rev23-4-0
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
@@ -552,12 +551,12 @@ public class WikipediaApp extends Application {
         return headers;
     }
 
-    private void initExceptionHandling() {
-        crashReporter = new HockeyAppCrashReporter(getString(R.string.hockeyapp_app_id), consentAccessor());
-        crashReporter.registerCrashHandler(this);
-
-        L.setRemoteLogger(crashReporter);
-    }
+//    private void initExceptionHandling() {
+//        crashReporter = new HockeyAppCrashReporter(getString(R.string.hockeyapp_app_id), consentAccessor());
+//        crashReporter.registerCrashHandler(this);
+//
+//        L.setRemoteLogger(crashReporter);
+//    }
 
     private CrashReporter.AutoUploadConsentAccessor consentAccessor() {
         return new CrashReporter.AutoUploadConsentAccessor() {

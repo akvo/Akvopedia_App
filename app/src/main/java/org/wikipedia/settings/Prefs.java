@@ -113,7 +113,9 @@ public final class Prefs {
     }
 
     public static boolean isCrashReportAutoUploadEnabled() {
-        return getBoolean(R.string.preference_key_auto_upload_crash_reports, true);
+        //Akvopedia: disable crash reports
+        return false;
+//        return getBoolean(R.string.preference_key_auto_upload_crash_reports, true);
     }
 
     public static boolean isShowDeveloperSettingsEnabled() {
@@ -262,11 +264,15 @@ public final class Prefs {
     }
 
     public static boolean useRestBaseSetManually() {
-        return getBoolean(R.string.preference_key_use_restbase_manual, false);
+        //Akvopedia: disable RestBase api
+        return true;
+//        return getBoolean(R.string.preference_key_use_restbase_manual, false);
     }
 
     public static boolean useRestBase() {
-        return getBoolean(R.string.preference_key_use_restbase, false);
+        //Akvopedia: disable RestBase api
+        return false;
+//        return getBoolean(R.string.preference_key_use_restbase, false);
     }
 
     public static void setUseRestBase(boolean enabled) {
@@ -309,8 +315,10 @@ public final class Prefs {
 
     @NonNull
     public static String getRestbaseUriFormat() {
-        return StringUtil.defaultIfBlank(getString(R.string.preference_key_restbase_uri_format, null),
-                "%1$s://%2$s/restbase/rest_v1/");
+        //Akvopedia: disable RestBase api
+        return "%1$s://%2$s/";
+//        return StringUtil.defaultIfBlank(getString(R.string.preference_key_restbase_uri_format, null),
+//                "%1$s://%2$s/api/rest_v1/");
     }
 
     @NonNull
