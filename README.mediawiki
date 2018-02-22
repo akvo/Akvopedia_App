@@ -4,4 +4,4 @@ This repository contains the source code for the Akvopedia Android app.
 
 == Documentation ==
 
-All documentation is kept on [https://github.com/akvo/Akvopedia_App/wiki our wiki].
+The code change and release procedure can be found [https://github.com/akvo/Akvopedia_App/wiki/Akvopedia-app-code-changing-and-release-process here].
